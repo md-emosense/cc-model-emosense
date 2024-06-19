@@ -207,7 +207,7 @@ def predict_image(uploaded_file: UploadFile, response: Response):
         print("Image shape:", image.shape)
 
         # Preprocess the image
-        image = tf.image.resize(image, (640, 640)) / 255.0
+        image = tf.image.resize(image, (224, 224)) / 255.0
         image = tf.expand_dims(image, axis=0)
 
         # Make a prediction using the model
